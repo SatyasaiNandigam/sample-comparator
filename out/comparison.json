@@ -1,0 +1,2805 @@
+{
+  "meta": {
+    "schema_version": "0.1",
+    "prompt_version": "0.1",
+    "doc_a": "sample",
+    "doc_b": "sample2",
+    "pages_a": 1,
+    "pages_b": 1
+  },
+  "summary": {
+    "different": 27,
+    "match": 3,
+    "needs_review": 3,
+    "both_na": 5,
+    "total": 38,
+    "flagged_for_review": 3
+  },
+  "rows": [
+    {
+      "key": "company",
+      "label": "Company",
+      "order": 1,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "value: cedar peak life insurance company | cedar peak financial group vs summit harbor life insurance company | summit harbor holdings, inc",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "",
+            "a": "cedar peak life insurance company | cedar peak financial group",
+            "b": "summit harbor life insurance company | summit harbor holdings, inc"
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Cedar Peak Life Insurance Company | Cedar Peak Financial Group",
+        "value": "Cedar Peak Life Insurance Company | Cedar Peak Financial Group",
+        "normalized": "cedar peak life insurance company | cedar peak financial group",
+        "evidence": [
+          {
+            "quote": "Issuing carrier Cedar Peak Life Insurance Company ... Parent organization Cedar Peak Financial Group",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Summit Harbor Life Insurance Company | Summit Harbor Holdings, Inc.",
+        "value": "Summit Harbor Life Insurance Company | Summit Harbor Holdings, Inc.",
+        "normalized": "summit harbor life insurance company | summit harbor holdings, inc",
+        "evidence": [
+          {
+            "quote": "Issuing carrier\nSummit Harbor Life Insurance Company",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "issued by Summit Harbor Life Insurance Company, a fictional life insurer within Summit Harbor Holdings, Inc.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "am_best_rating",
+      "label": "A.M Best Rating",
+      "order": 2,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "value: a vs a-",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "",
+            "a": "a",
+            "b": "a-"
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "A (Excellent)",
+        "value": "A",
+        "normalized": "a",
+        "evidence": [
+          {
+            "quote": "A.M. Best A (Excellent)",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "A- (Excellent)",
+        "value": "A-",
+        "normalized": "a-",
+        "evidence": [
+          {
+            "quote": "A.M. Best\nA- (Excellent)",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "sp_rating",
+      "label": "Standard and Poor's Rating",
+      "order": 3,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "value: a vs a-",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "",
+            "a": "a",
+            "b": "a-"
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "A",
+        "value": "A",
+        "normalized": "a",
+        "evidence": [
+          {
+            "quote": "Standard & Poor's A",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "A-",
+        "value": "A-",
+        "normalized": "a-",
+        "evidence": [
+          {
+            "quote": "Standard & Poor’s\nA-",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "product_type",
+      "label": "Product Type",
+      "order": 4,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "value: myg fixed vs flexible-premium deferred fixed annuity",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "",
+            "a": "myg fixed",
+            "b": "flexible-premium deferred fixed annuity"
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Multi-Year Guaranteed (MYG) Fixed Deferred Annuity",
+        "value": "MYG Fixed",
+        "normalized": "myg fixed",
+        "evidence": [
+          {
+            "quote": "Product class Multi-Year Guaranteed (MYG) Fixed Deferred Annuity",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "medium",
+        "flags": [],
+        "note": "Document labels the class as 'Multi-Year Guaranteed (MYG) Fixed Deferred Annuity'; value given in a short canonical form 'MYG Fixed'."
+      },
+      "b": {
+        "state": "found",
+        "display": "Flexible-Premium Deferred Fixed Annuity",
+        "value": "Flexible-Premium Deferred Fixed Annuity",
+        "normalized": "flexible-premium deferred fixed annuity",
+        "evidence": [
+          {
+            "quote": "Product class\nFlexible-Premium Deferred Fixed Annuity with a five-year initial rate guarantee",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Flexible Premium Deferred Annuity - Fixed",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "primary_product_objective",
+      "label": "Primary Product Objective",
+      "order": 5,
+      "group": "product_info",
+      "status": "match",
+      "base_status": "match",
+      "reason": "values are the same",
+      "method": "exact",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Accumulation",
+        "value": "Accumulation",
+        "normalized": "accumulation",
+        "evidence": [
+          {
+            "quote": "OBJECTIVE Accumulation",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Accumulation",
+        "value": "Accumulation",
+        "normalized": "accumulation",
+        "evidence": [
+          {
+            "quote": "Primary objective\nAccumulation",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Primary use\nTax-deferred accumulation with flexible contributions and declared fixed interest",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "product",
+      "label": "Product",
+      "order": 6,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "value: cedar peak horizon 7 fixed annuity (single premium deferred annuity) vs summit harbor select 5 fixed annuity (flexible premium deferred fixed annuity)",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "",
+            "a": "cedar peak horizon 7 fixed annuity (single premium deferred annuity)",
+            "b": "summit harbor select 5 fixed annuity (flexible premium deferred fixed annuity)"
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Cedar Peak Horizon 7 Fixed Annuity (Single Premium Deferred Annuity)",
+        "value": "Cedar Peak Horizon 7 Fixed Annuity (Single Premium Deferred Annuity)",
+        "normalized": "cedar peak horizon 7 fixed annuity (single premium deferred annuity)",
+        "evidence": [
+          {
+            "quote": "Marketing name Cedar Peak Horizon 7 Fixed Annuity (Single Premium Deferred Annuity)",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Summit Harbor Select 5 Fixed Annuity (Flexible Premium Deferred Fixed Annuity)",
+        "value": "Summit Harbor Select 5 Fixed Annuity (Flexible Premium Deferred Fixed Annuity)",
+        "normalized": "summit harbor select 5 fixed annuity (flexible premium deferred fixed annuity)",
+        "evidence": [
+          {
+            "quote": "Summit Harbor Select 5 Fixed Annuity (Flexible Premium Deferred\nFixed Annuity)",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "policy_form_number",
+      "label": "Policy Form Number",
+      "order": 7,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "value: cph7-spda-25-01 vs shs5-fpdfa-26-02",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "",
+            "a": "cph7-spda-25-01",
+            "b": "shs5-fpdfa-26-02"
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "CPH7-SPDA-25-01",
+        "value": "CPH7-SPDA-25-01",
+        "normalized": "cph7-spda-25-01",
+        "evidence": [
+          {
+            "quote": "CPH7-SPDA-25-01",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "SHS5-FPDFA-26-02",
+        "value": "SHS5-FPDFA-26-02",
+        "normalized": "shs5-fpdfa-26-02",
+        "evidence": [
+          {
+            "quote": "Base policy form\nSHS5-FPDFA-26-02",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Product form identifier\nSHS5-FPDFA-26-02",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "distribution_channels",
+      "label": "Distribution Channels Sold In",
+      "order": 8,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "only in A (3): bank channel: participating banks and their authorized insurance distribution arrangements, broker-dealer channel: full-service national broker-dealer firms, independent channel: independent insurance agencies and appointed independent producers; only in B (3): bank channel, career channel, independent channel",
+      "method": "set",
+      "detail": {
+        "only_in_a": [
+          "bank channel: participating banks and their authorized insurance distribution arrangements",
+          "broker-dealer channel: full-service national broker-dealer firms",
+          "independent channel: independent insurance agencies and appointed independent producers"
+        ],
+        "only_in_b": [
+          "bank channel",
+          "career channel",
+          "independent channel"
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Broker-dealer channel: full-service national broker-dealer firms.; Bank channel: participating banks and their authorized insurance distribution arrangements.; Independent channel: independent insurance agencies and appointed independent producers.",
+        "value": [
+          "Broker-dealer channel: full-service national broker-dealer firms.",
+          "Bank channel: participating banks and their authorized insurance distribution arrangements.",
+          "Independent channel: independent insurance agencies and appointed independent producers."
+        ],
+        "normalized": [
+          "bank channel: participating banks and their authorized insurance distribution arrangements",
+          "broker-dealer channel: full-service national broker-dealer firms",
+          "independent channel: independent insurance agencies and appointed independent producers"
+        ],
+        "evidence": [
+          {
+            "quote": "Broker-dealer channel: full-service national broker-dealer firms.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Bank channel: participating banks and their authorized insurance distribution arrangements.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Independent channel: independent insurance agencies and appointed independent producers.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Independent channel; Bank channel; Career channel",
+        "value": [
+          "Independent channel",
+          "Bank channel",
+          "Career channel"
+        ],
+        "normalized": [
+          "bank channel",
+          "career channel",
+          "independent channel"
+        ],
+        "evidence": [
+          {
+            "quote": "Independent channel: appointed independent insurance agencies and producers.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Bank channel: participating banks and authorized insurance distribution arrangements.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Career channel: carrier-affiliated producers operating under approved supervision.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "product_launch_date",
+      "label": "Product Launch Date",
+      "order": 9,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "value: 2025-01-06 vs 2026-05-12",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "",
+            "a": "2025-01-06",
+            "b": "2026-05-12"
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "January 6, 2025",
+        "value": "2025-01-06",
+        "normalized": "2025-01-06",
+        "evidence": [
+          {
+            "quote": "Product launch / first sale availability January 6, 2025",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "May 12, 2026",
+        "value": "2026-05-12",
+        "normalized": "2026-05-12",
+        "evidence": [
+          {
+            "quote": "Initial availability\nMay 12, 2026",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Product launch / first sale availability\nMay 12, 2026",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "bonus",
+      "label": "Bonus",
+      "order": 10,
+      "group": "charges",
+      "status": "different",
+      "base_status": "different",
+      "reason": "A states there is no premium/purchase bonus; B provides a 1.25% premium credit that vests 10% per year over 10 years and applies to premiums in the first 24 months.",
+      "method": "llm_judge",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "No premium or purchase bonus is credited at issue under the illustrative Horizon 7 design.",
+        "value": "No premium or purchase bonus is credited at issue",
+        "normalized": "no premium or purchase bonus is credited at issue",
+        "evidence": [
+          {
+            "quote": "No premium or purchase bonus is credited at issue under the illustrative Horizon 7 design.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "A premium credit equal to 1.25% of each eligible premium is added to contract value; Bonus credits vest over ten contract years at 10% per year; applies during first 24 months.",
+        "value": "A premium credit equal to 1.25% of each eligible premium; vests over ten contract years at 10% per year; applies to premiums received during first 24 months",
+        "normalized": "a premium credit equal to 1.25% of each eligible premium; vests over ten contract years at 10% per year; applies to premiums received during first 24 months",
+        "evidence": [
+          {
+            "quote": "A premium credit equal to 1.25% of each eligible premium is added to contract value at the time the premium is accepted.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Bonus credits vest over ten contract years at 10% per year.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "surrender_charge",
+      "label": "Surrender Charge",
+      "order": 11,
+      "group": "charges",
+      "status": "needs_review",
+      "base_status": "different",
+      "reason": "schedule_pct: [7, 6, 5, 4, 3, 2, 1] vs [8, 7, 6, 5, 4, 3, 2, 1]; years: 7 vs 9",
+      "method": "schedule",
+      "detail": {
+        "diffs": [
+          {
+            "path": "schedule_pct",
+            "a": [
+              7.0,
+              6.0,
+              5.0,
+              4.0,
+              3.0,
+              2.0,
+              1.0
+            ],
+            "b": [
+              8.0,
+              7.0,
+              6.0,
+              5.0,
+              4.0,
+              3.0,
+              2.0,
+              1.0
+            ]
+          },
+          {
+            "path": "years",
+            "a": 7,
+            "b": 9
+          }
+        ]
+      },
+      "review": true,
+      "review_reasons": [
+        "A: quote not found verbatim in the document: \"1 7% 2 6% 3 5% 4 4% 5 3% 6 2% 7 1% 8 and later 0%\""
+      ],
+      "a": {
+        "state": "found",
+        "display": "1 7% 2 6% 3 5% 4 4% 5 3% 6 2% 7 1% 8 and later 0%",
+        "value": {
+          "years": 7,
+          "schedule_pct": [
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "mva": "both"
+        },
+        "normalized": {
+          "years": 7,
+          "schedule_pct": [
+            7.0,
+            6.0,
+            5.0,
+            4.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "mva": "both"
+        },
+        "evidence": [
+          {
+            "quote": "1 7% 2 6% 3 5% 4 4% 5 3% 6 2% 7 1% 8 and later 0%",
+            "page": 15,
+            "verified": false
+          },
+          {
+            "quote": "the adjustment may be positive or negative.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected",
+          "quote_not_found"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "1: 8%; 2: 7%; 3: 6%; 4: 5%; 5: 4%; 6: 3%; 7: 2%; 8: 1%; 9 and later: 0%",
+        "value": {
+          "years": 9,
+          "schedule_pct": [
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "mva": "both"
+        },
+        "normalized": {
+          "years": 9,
+          "schedule_pct": [
+            8.0,
+            7.0,
+            6.0,
+            5.0,
+            4.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "mva": "both"
+        },
+        "evidence": [
+          {
+            "quote": "The illustrative schedule declines over eight contract years and reaches zero beginning in contract year nine.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "9 and later\n0%",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "A market value adjustment (MVA) applies in addition to the surrender charge for transactions subject to the MVA during the surrender-charge period.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Depending on changes in market interest rates and the contract’s MVA formula, the adjustment may be positive or negative.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "product_fee",
+      "label": "Product Fee",
+      "order": 12,
+      "group": "charges",
+      "status": "different",
+      "base_status": "different",
+      "reason": "A indicates no product fee; B charges a recurring product fee of 0.10% of account value.",
+      "method": "llm_judge",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "None",
+        "value": "None",
+        "normalized": "none",
+        "evidence": [
+          {
+            "quote": "Product-specific fee None",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "No separate product fee is deducted",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "0.10% of account value",
+        "value": "0.10% of account value",
+        "normalized": "0.10% of account value",
+        "evidence": [
+          {
+            "quote": "Product-specific annual fee\n0.10% of account value",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "other_charge",
+      "label": "Other Charge",
+      "order": 13,
+      "group": "charges",
+      "status": "different",
+      "base_status": "different",
+      "reason": "A lists none; B specifies a $25 domestic wire fee and a $30 returned-payment fee.",
+      "method": "llm_judge",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "None specified",
+        "value": "None specified",
+        "normalized": "none specified",
+        "evidence": [
+          {
+            "quote": "Other unrelated charges None specified",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "No additional miscellaneous charge in this example",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "$25 domestic wire fee; $30 returned-payment fee",
+        "value": "$25 domestic wire fee; $30 returned-payment fee",
+        "normalized": "$25 domestic wire fee; $30 returned-payment fee",
+        "evidence": [
+          {
+            "quote": "Other unrelated charges\n$25 domestic wire fee; $30 returned-payment fee",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "total_annual_expense",
+      "label": "*Total Annual Expense",
+      "order": 14,
+      "group": "charges",
+      "status": "different",
+      "base_status": "different",
+      "reason": "numbers differ: [0] vs [0.25]",
+      "method": "numeric_tokens",
+      "detail": {
+        "numbers_a": [
+          0.0
+        ],
+        "numbers_b": [
+          0.25
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "0.00%",
+        "value": "0.00",
+        "normalized": "0.00",
+        "evidence": [
+          {
+            "quote": "Total annual asset-based expense 0.00%",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "No percentage-based annual contract expense; rider charges are excluded",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "0.25%",
+        "value": "0.25%",
+        "normalized": "0.25%",
+        "evidence": [
+          {
+            "quote": "Total annual asset-based expense\n0.25%",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The 0.25% total annual asset-based expense is the sum of the 0.10% product-specific fee and the 0.15% other annual asset-based expense.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "annual_contract_fee",
+      "label": "Annual Contract Fee",
+      "order": 15,
+      "group": "charges",
+      "status": "different",
+      "base_status": "different",
+      "reason": "amount: 50 vs 35",
+      "method": "numeric",
+      "detail": {
+        "diffs": [
+          {
+            "path": "amount",
+            "a": 50.0,
+            "b": 35.0
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "$50 per contract year",
+        "value": {
+          "amount": 50,
+          "basis": null
+        },
+        "normalized": {
+          "amount": 50.0
+        },
+        "evidence": [
+          {
+            "quote": "$50 per contract year",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Flat annual maintenance fee",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "$35 per contract year",
+        "value": {
+          "amount": 35,
+          "basis": null
+        },
+        "normalized": {
+          "amount": 35.0
+        },
+        "evidence": [
+          {
+            "quote": "Annual contract fee\n$35 per contract year",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "annual_contract_fee_waived_at",
+      "label": "Annual Contract Fee Waived At",
+      "order": 16,
+      "group": "charges",
+      "status": "different",
+      "base_status": "different",
+      "reason": "amount: 100000 vs 75000",
+      "method": "numeric",
+      "detail": {
+        "diffs": [
+          {
+            "path": "amount",
+            "a": 100000.0,
+            "b": 75000.0
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "$100,000 contract value",
+        "value": {
+          "amount": 100000,
+          "basis": "contract value"
+        },
+        "normalized": {
+          "amount": 100000.0
+        },
+        "evidence": [
+          {
+            "quote": "Fee-waiver threshold $100,000 contract value",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Annual contract fee waived when contract value is at or above threshold",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "$75,000 contract value",
+        "value": {
+          "amount": 75000,
+          "basis": "contract value"
+        },
+        "normalized": {
+          "amount": 75000.0
+        },
+        "evidence": [
+          {
+            "quote": "Fee-waiver threshold\n$75,000 contract value",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Annual contract fee waived at or above threshold",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "min_guarantee_msv",
+      "label": "Minimum Guarantee/ Minimum Guaranteed Surrender Value",
+      "order": 17,
+      "group": "charges",
+      "status": "different",
+      "base_status": "different",
+      "reason": "pct_of_premium: 87.5 vs 90; rate_max: 3 vs 3.25; rate_min: 1 vs 1.5",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "pct_of_premium",
+            "a": 87.5,
+            "b": 90.0
+          },
+          {
+            "path": "rate_max",
+            "a": 3.0,
+            "b": 3.25
+          },
+          {
+            "path": "rate_min",
+            "a": 1.0,
+            "b": 1.5
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "87.5% of eligible premiums accumulated at the applicable minimum guaranteed interest rate; minimum rate 1.00% to 3.00%",
+        "value": {
+          "varies": true,
+          "pct_of_premium": 87.5,
+          "rate_min": 1,
+          "rate_max": 3
+        },
+        "normalized": {
+          "varies": true,
+          "pct_of_premium": 87.5,
+          "rate_min": 1.0,
+          "rate_max": 3.0
+        },
+        "evidence": [
+          {
+            "quote": "Premium percentage 87.5%",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Minimum guaranteed interest rate 1.00% to 3.00%, depending on state and applicable form",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Varies",
+        "value": {
+          "varies": true,
+          "pct_of_premium": 90,
+          "rate_min": 1.5,
+          "rate_max": 3.25
+        },
+        "normalized": {
+          "varies": true,
+          "pct_of_premium": 90.0,
+          "rate_min": 1.5,
+          "rate_max": 3.25
+        },
+        "evidence": [
+          {
+            "quote": "Premium percentage\n90.0%",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Minimum guaranteed interest rate\n1.50% to 3.25%, depending on state and applicable form",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "strategies_offered",
+      "label": "Strategies Offered",
+      "order": 18,
+      "group": "rates",
+      "status": "match",
+      "base_status": "match",
+      "reason": "values are the same",
+      "method": "exact",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "INDEXED STRATEGIES 0; FIXED STRATEGIES 1",
+        "value": {
+          "indexed": 0,
+          "fixed": 1
+        },
+        "normalized": {
+          "indexed": 0,
+          "fixed": 1
+        },
+        "evidence": [
+          {
+            "quote": "INDEXED STRATEGIES\n0\nFIXED STRATEGIES\n1",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The contract offers one fixed-interest crediting strategy and no indexed strategies.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "The contract offers one fixed-interest crediting strategy and no indexed strategies.",
+        "value": {
+          "indexed": 0,
+          "fixed": 1
+        },
+        "normalized": {
+          "indexed": 0,
+          "fixed": 1
+        },
+        "evidence": [
+          {
+            "quote": "The contract offers one fixed-interest crediting strategy and no indexed strategies.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "rate_banding",
+      "label": "Rate Banding",
+      "order": 19,
+      "group": "rates",
+      "status": "different",
+      "base_status": "different",
+      "reason": "band: low band; high band vs preferred band; threshold: 100000 vs 50000",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "band",
+            "a": "low band; high band",
+            "b": "preferred band"
+          },
+          {
+            "path": "threshold",
+            "a": 100000.0,
+            "b": 50000.0
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Low band $10,000 to $99,999.99; High band $100,000 and above",
+        "value": {
+          "band": "Low band; High band",
+          "threshold": 100000
+        },
+        "normalized": {
+          "band": "low band; high band",
+          "threshold": 100000.0
+        },
+        "evidence": [
+          {
+            "quote": "Low band $10,000 to $99,999.99",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "High band $100,000 and above",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The premium threshold separating the two bands is $100,000.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Preferred band $50,000 and above",
+        "value": {
+          "band": "Preferred band",
+          "threshold": 50000
+        },
+        "normalized": {
+          "band": "preferred band",
+          "threshold": 50000.0
+        },
+        "evidence": [
+          {
+            "quote": "Preferred band $50,000 and above",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The premium threshold separating the two bands is $50,000.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "current_fixed_rates",
+      "label": "Current Fixed Account Rate(s)",
+      "order": 20,
+      "group": "rates",
+      "status": "different",
+      "base_status": "different",
+      "reason": "guarantee_years: 7 vs 5; rates_pct: [4.25, 4.4] vs [3.85, 4.1]",
+      "method": "numeric",
+      "detail": {
+        "diffs": [
+          {
+            "path": "guarantee_years",
+            "a": 7,
+            "b": 5
+          },
+          {
+            "path": "rates_pct",
+            "a": [
+              4.25,
+              4.4
+            ],
+            "b": [
+              3.85,
+              4.1
+            ]
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Low band $10,000 to $99,999.99 4.25% 7 years; High band $100,000 and above 4.40% 7 years",
+        "value": {
+          "rates_pct": [
+            4.25,
+            4.4
+          ],
+          "guarantee_years": 7,
+          "effective_date": null
+        },
+        "normalized": {
+          "rates_pct": [
+            4.25,
+            4.4
+          ],
+          "guarantee_years": 7,
+          "effective_date": null
+        },
+        "evidence": [
+          {
+            "quote": "Low band $10,000 to $99,999.99 4.25% 7 years",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "High band $100,000 and above 4.40% 7 years",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Standard band $5,000 to $49,999.99 3.85% 5 years; Preferred band $50,000 and above 4.10% 5 years",
+        "value": {
+          "rates_pct": [
+            3.85,
+            4.1
+          ],
+          "guarantee_years": 5,
+          "effective_date": null
+        },
+        "normalized": {
+          "rates_pct": [
+            3.85,
+            4.1
+          ],
+          "guarantee_years": 5,
+          "effective_date": null
+        },
+        "evidence": [
+          {
+            "quote": "Standard band $5,000 to $49,999.99 3.85% 5 years",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Preferred band $50,000 and above 4.10% 5 years",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "upcoming_fixed_rates",
+      "label": "Upcoming Fixed Account Rate(s)",
+      "order": 21,
+      "group": "rates",
+      "status": "different",
+      "base_status": "different",
+      "reason": "A states it does not apply; B has a value",
+      "method": "state",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "No future fixed-account rate change has been announced in this example as of November 1, 2026.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "The announced rates are 3.70% for the Standard band and 3.95% for the Preferred band, each with a five-year guarantee. Effective December 1, 2026.",
+        "value": {
+          "rates_pct": [
+            3.7,
+            3.95
+          ],
+          "guarantee_years": 5,
+          "effective_date": "2026-12-01"
+        },
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "A revised declared-rate schedule is announced in this example for new premium segments effective December 1, 2026.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The announced rates are 3.70% for the Standard band and 3.95% for the Preferred band, each with a five-year guarantee.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "other_crediting_strategy_info",
+      "label": "Other Crediting Strategy Information",
+      "order": 22,
+      "group": "rates",
+      "status": "different",
+      "base_status": "different",
+      "reason": "A says a single fixed-account with an initial seven-year guarantee and no indexed options; B describes daily interest accrual, annual compounding and segment renewals at insurer-declared rates but does not state the seven-year initial guarantee or absence of indexed allocations.",
+      "method": "llm_judge",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "The contract offers one fixed-interest crediting strategy and no indexed strategies. The fixed account provides a declared rate for the initial seven-year guarantee period. The product does not expose the owner to index caps, participation rates or spreads because no indexed allocation is available.",
+        "value": "The contract offers one fixed-interest crediting strategy and no indexed strategies. The fixed account provides a declared rate for the initial seven-year guarantee period. The product does not expose the owner to index caps, participation rates or spreads because no indexed allocation is available.",
+        "normalized": "the contract offers one fixed-interest crediting strategy and no indexed strategies. the fixed account provides a declared rate for the initial seven-year guarantee period. the product does not expose the owner to index caps, participation rates or spreads because no indexed allocation is available",
+        "evidence": [
+          {
+            "quote": "The contract offers one fixed-interest crediting strategy and no indexed strategies.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The fixed account provides a declared rate for the initial seven-year guarantee period.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The product does not expose the owner to index caps, participation rates or spreads because no indexed allocation is available.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Interest is credited under the fixed-account accumulation provisions; the example assumes daily interest accrual and annual compounding. At the end of each segment’s guarantee period, the segment renews at a rate declared by the insurer for the applicable renewal period.",
+        "value": "Interest is credited under the fixed-account accumulation provisions; the example assumes daily interest accrual and annual compounding. At the end of each segment’s guarantee period, the segment renews at a rate declared by the insurer for the applicable renewal period.",
+        "normalized": "interest is credited under the fixed-account accumulation provisions; the example assumes daily interest accrual and annual compounding. at the end of each segment's guarantee period, the segment renews at a rate declared by the insurer for the applicable renewal period",
+        "evidence": [
+          {
+            "quote": "Interest is credited under the fixed-account accumulation provisions; the example assumes daily interest accrual and annual compounding.",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "At the end of each segment’s guarantee period, the segment renews at a rate declared by the insurer for the applicable renewal period.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "penalty_free_withdrawals",
+      "label": "Penalty-Free Withdrawals",
+      "order": 23,
+      "group": "benefits",
+      "status": "different",
+      "base_status": "different",
+      "reason": "numbers differ: [10] vs [8]",
+      "method": "numeric_tokens",
+      "detail": {
+        "numbers_a": [
+          10.0
+        ],
+        "numbers_b": [
+          8.0
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "the owner may withdraw up to 10% of the contract's value as measured on the prior contract anniversary during each contract year without a surrender charge or MVA",
+        "value": "the owner may withdraw up to 10% of the contract's value as measured on the prior contract anniversary during each contract year without a surrender charge or MVA",
+        "normalized": "the owner may withdraw up to 10% of the contract's value as measured on the prior contract anniversary during each contract year without a surrender charge or mva",
+        "evidence": [
+          {
+            "quote": "Beginning after the first contract anniversary ... withdraw up to 10% of the contract's value ... without a surrender charge or MVA.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Beginning after the first contract anniversary, the owner may withdraw up to 8% of the contract value measured on the prior contract anniversary during each contract year without a surrender charge or MVA.",
+        "value": "Up to 8% of contract value each contract year, beginning after the first contract anniversary (measured on prior anniversary), without surrender charge or MVA",
+        "normalized": "up to 8% of contract value each contract year, beginning after the first contract anniversary (measured on prior anniversary), without surrender charge or mva",
+        "evidence": [
+          {
+            "quote": "Beginning after the first contract anniversary ... withdraw up to 8% of the contract value ... without a surrender charge or MVA.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "death_benefit",
+      "label": "Death Benefit",
+      "order": 24,
+      "group": "benefits",
+      "status": "different",
+      "base_status": "different",
+      "reason": "A states the full accumulation value is paid; B specifies the accumulation value including vested bonus credits and that surrender charges and MVA are waived for death proceeds, details not stated in A.",
+      "method": "llm_judge",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "the contract's full accumulation value",
+        "value": "the contract's full accumulation value",
+        "normalized": "the contract's full accumulation value",
+        "evidence": [
+          {
+            "quote": "If the owner dies before annuitization, the beneficiary is entitled to the contract's full accumulation value",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "no surrender charge or MVA is applied to proceeds payable because of the owner's death",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "If the owner dies before annuitization, the beneficiary is entitled to the contract’s accumulation value, including vested bonus credits.",
+        "value": "Contract's accumulation value, including vested bonus credits; surrender charges and MVA waived for death proceeds",
+        "normalized": "contract's accumulation value, including vested bonus credits; surrender charges and mva waived for death proceeds",
+        "evidence": [
+          {
+            "quote": "the beneficiary is entitled to the contract’s accumulation value, including vested bonus credits",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "surrender charges and MVA are waived for proceeds payable because of the owner’s death",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "surrender_charge_waivers",
+      "label": "Surrender Charge Waivers Available",
+      "order": 25,
+      "group": "benefits",
+      "status": "match",
+      "base_status": "match",
+      "reason": "same set",
+      "method": "set",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Nursing home confinement; Terminal illness; Chronic illness",
+        "value": [
+          "Nursing home confinement",
+          "Terminal illness",
+          "Chronic illness"
+        ],
+        "normalized": [
+          "chronic illness",
+          "nursing home",
+          "terminal illness"
+        ],
+        "evidence": [
+          {
+            "quote": "Nursing home confinement | At least 90 consecutive days of qualifying confinement, subject to policy definitions",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Terminal illness | Certification of a terminal illness with a life expectancy of 12 months or less, subject to form terms",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Chronic illness | Certification of qualifying chronic illness and required assistance, subject to policy definitions",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Nursing home confinement; Terminal illness; Chronic illness",
+        "value": [
+          "Nursing home confinement",
+          "Terminal illness",
+          "Chronic illness"
+        ],
+        "normalized": [
+          "chronic illness",
+          "nursing home",
+          "terminal illness"
+        ],
+        "evidence": [
+          {
+            "quote": "Nursing home confinement | At least 60 consecutive days of qualifying confinement",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Terminal illness | Certification of terminal illness with life expectancy of 18 months or less",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Chronic illness | Certification of qualifying chronic illness and required assistance",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "available_plan_types",
+      "label": "Available Plan Types",
+      "order": 26,
+      "group": "availability",
+      "status": "different",
+      "base_status": "different",
+      "reason": "only in A (3): individual non-qualified contract, inherited ira, inherited non-qualified contract; only in B (6): individual non-qualified, inherited non-qualified individual contract, inherited roth ira, inherited traditional ira, joint non-qualified, simple ira",
+      "method": "set",
+      "detail": {
+        "only_in_a": [
+          "individual non-qualified contract",
+          "inherited ira",
+          "inherited non-qualified contract"
+        ],
+        "only_in_b": [
+          "individual non-qualified",
+          "inherited non-qualified individual contract",
+          "inherited roth ira",
+          "inherited traditional ira",
+          "joint non-qualified",
+          "simple ira"
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Qualified: Traditional IRA, Roth IRA and SEP IRA; Inherited qualified: Inherited IRA; Non-qualified: Individual non-qualified contract; Inherited non-qualified: Inherited non-qualified contract",
+        "value": [
+          "Traditional IRA",
+          "Roth IRA",
+          "SEP IRA",
+          "Inherited IRA",
+          "Individual non-qualified contract",
+          "Inherited non-qualified contract"
+        ],
+        "normalized": [
+          "individual non-qualified contract",
+          "inherited ira",
+          "inherited non-qualified contract",
+          "ira",
+          "roth ira",
+          "sep ira"
+        ],
+        "evidence": [
+          {
+            "quote": "Qualified Traditional IRA, Roth IRA and SEP IRA",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Non-qualified Individual non-qualified contract",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Inherited qualified Inherited IRA",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Inherited non-qualified Inherited non-qualified contract",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Qualified Traditional IRA, Roth IRA, SEP IRA and SIMPLE IRA; Inherited Traditional IRA and inherited Roth IRA; Individual non-qualified and joint non-qualified contracts; Inherited non-qualified individual contract",
+        "value": [
+          "Traditional IRA",
+          "Roth IRA",
+          "SEP IRA",
+          "SIMPLE IRA",
+          "Inherited Traditional IRA",
+          "Inherited Roth IRA",
+          "Individual non-qualified",
+          "Joint non-qualified",
+          "Inherited non-qualified individual contract"
+        ],
+        "normalized": [
+          "individual non-qualified",
+          "inherited non-qualified individual contract",
+          "inherited roth ira",
+          "inherited traditional ira",
+          "ira",
+          "joint non-qualified",
+          "roth ira",
+          "sep ira",
+          "simple ira"
+        ],
+        "evidence": [
+          {
+            "quote": "Qualified Traditional IRA, Roth IRA, SEP IRA and SIMPLE IRA",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Inherited Traditional IRA and inherited Roth IRA",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Non-qualified Individual non-qualified and joint non-qualified contracts",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Inherited non-qualified individual contract",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "issue_ages",
+      "label": "Issue Ages",
+      "order": 27,
+      "group": "availability",
+      "status": "different",
+      "base_status": "different",
+      "reason": "inherited ira/inherited nq|-|18: {'min_age': 18, 'max_age': 85, 'pct': None} vs <absent>; inherited qualified/inherited non-qualified|-|18: <absent> vs {'min_age': 18, 'max_age': 90, 'pct': None}; qualified/non-qualified|-|18.max_age: 85 vs 82",
+      "method": "bands",
+      "detail": {
+        "diffs": [
+          {
+            "path": "inherited ira/inherited nq|-|18",
+            "a": {
+              "min_age": 18,
+              "max_age": 85,
+              "pct": null
+            },
+            "b": "<absent>"
+          },
+          {
+            "path": "inherited qualified/inherited non-qualified|-|18",
+            "a": "<absent>",
+            "b": {
+              "min_age": 18,
+              "max_age": 90,
+              "pct": null
+            }
+          },
+          {
+            "path": "qualified/non-qualified|-|18.max_age",
+            "a": 85,
+            "b": 82
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Qualified / non-qualified: Min 18 Max 85; Inherited IRA / inherited NQ: Min 18 Max 85",
+        "value": [
+          {
+            "category": "Qualified / non-qualified",
+            "year": null,
+            "min_age": 18,
+            "max_age": 85,
+            "pct": null
+          },
+          {
+            "category": "Inherited IRA / inherited NQ",
+            "year": null,
+            "min_age": 18,
+            "max_age": 85,
+            "pct": null
+          }
+        ],
+        "normalized": {
+          "qualified/non-qualified|-|18": {
+            "min_age": 18,
+            "max_age": 85,
+            "pct": null
+          },
+          "inherited ira/inherited nq|-|18": {
+            "min_age": 18,
+            "max_age": 85,
+            "pct": null
+          }
+        },
+        "evidence": [
+          {
+            "quote": "Qualified / non-qualified 18 85",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Inherited IRA / inherited NQ 18 85",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Qualified / non-qualified 18 82; Inherited qualified / inherited non-qualified 18 90",
+        "value": [
+          {
+            "category": "Qualified / non-qualified",
+            "year": null,
+            "min_age": 18,
+            "max_age": 82,
+            "pct": null
+          },
+          {
+            "category": "Inherited qualified / inherited non-qualified",
+            "year": null,
+            "min_age": 18,
+            "max_age": 90,
+            "pct": null
+          }
+        ],
+        "normalized": {
+          "qualified/non-qualified|-|18": {
+            "min_age": 18,
+            "max_age": 82,
+            "pct": null
+          },
+          "inherited qualified/inherited non-qualified|-|18": {
+            "min_age": 18,
+            "max_age": 90,
+            "pct": null
+          }
+        },
+        "evidence": [
+          {
+            "quote": "Qualified / non-qualified 18 82",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Inherited qualified / inherited non-qualified 18 90",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "min_initial_premium",
+      "label": "Minimum Initial Premiums",
+      "order": 28,
+      "group": "availability",
+      "status": "needs_review",
+      "base_status": "different",
+      "reason": "non-qualified plans: 10000 vs 7500; qualified plans: 10000 vs 5000",
+      "method": "by_key",
+      "detail": {
+        "diffs": [
+          {
+            "path": "non-qualified plans",
+            "a": 10000.0,
+            "b": 7500.0
+          },
+          {
+            "path": "qualified plans",
+            "a": 10000.0,
+            "b": 5000.0
+          }
+        ]
+      },
+      "review": true,
+      "review_reasons": [
+        "B: quote not found verbatim in the document: \"Minimum initial premium | $7,500\""
+      ],
+      "a": {
+        "state": "found",
+        "display": "Minimum initial premium $10,000 (Qualified); $10,000 (Non-qualified)",
+        "value": [
+          {
+            "category": "Qualified plans",
+            "amount": 10000
+          },
+          {
+            "category": "Non-qualified plans",
+            "amount": 10000
+          }
+        ],
+        "normalized": {
+          "qualified plans": 10000.0,
+          "non-qualified plans": 10000.0
+        },
+        "evidence": [
+          {
+            "quote": "Minimum initial premium $10,000 $10,000",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Qualified plans: $5,000; Non-qualified plans: $7,500",
+        "value": [
+          {
+            "category": "Qualified plans",
+            "amount": 5000
+          },
+          {
+            "category": "Non-qualified plans",
+            "amount": 7500
+          }
+        ],
+        "normalized": {
+          "qualified plans": 5000.0,
+          "non-qualified plans": 7500.0
+        },
+        "evidence": [
+          {
+            "quote": "Minimum initial premium | $5,000",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Minimum initial premium | $7,500",
+            "page": 1,
+            "verified": false
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "quote_not_found"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "min_subsequent_premium",
+      "label": "Minimum Subsequent Premium",
+      "order": 29,
+      "group": "availability",
+      "status": "needs_review",
+      "base_status": "different",
+      "reason": "A states it does not apply; B has a value",
+      "method": "state",
+      "detail": {},
+      "review": true,
+      "review_reasons": [
+        "B: quote not found verbatim in the document: \"Minimum subsequent premium | $1,000\""
+      ],
+      "a": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Minimum subsequent premium Not permitted Not permitted",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Additional premium payments after issue are not accepted under this product design; consequently, no minimum subsequent-premium amount applies.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Qualified plans: $500; Non-qualified plans: $1,000",
+        "value": [
+          {
+            "category": "Qualified plans",
+            "amount": 500
+          },
+          {
+            "category": "Non-qualified plans",
+            "amount": 1000
+          }
+        ],
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Minimum subsequent premium | $500",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Minimum subsequent premium | $1,000",
+            "page": 1,
+            "verified": false
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "quote_not_found"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "glwb",
+      "label": "Guaranteed Lifetime Withdrawal Benefit (GLWB)",
+      "order": 30,
+      "group": "benefits",
+      "status": "different",
+      "base_status": "different",
+      "reason": "A states it does not apply; B has a value",
+      "method": "state",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Lifetime Withdrawal Benefit (GLWB) Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Available by election; annual charge of 0.95% of rider benefit base; electable at issue (owner aged 50 through 80); charge deducted quarterly",
+        "value": "Available by election; annual rider charge 0.95% of rider benefit base (deducted quarterly); electable at issue for owners aged 50–80",
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Lifetime Withdrawal Benefit (GLWB) | Available by election",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The GLWB may be elected by an owner aged 50 through 80 at issue",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "The annual rider charge is 0.95% of the rider benefit base and is deducted quarterly from contract value.",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "gmwb",
+      "label": "Guaranteed Minimum Withdrawal Benefit (GMWB)",
+      "order": 31,
+      "group": "benefits",
+      "status": "both_na",
+      "base_status": "both_na",
+      "reason": "both state it does not apply",
+      "method": "state",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Minimum Withdrawal Benefit (GMWB) Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Minimum Withdrawal Benefit (GMWB) | Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "gmab",
+      "label": "Guaranteed Minimum Accumulation Benefit (GMAB)",
+      "order": 32,
+      "group": "benefits",
+      "status": "both_na",
+      "base_status": "both_na",
+      "reason": "both state it does not apply",
+      "method": "state",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Minimum Accumulation Benefit (GMAB) Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Minimum Accumulation Benefit (GMAB) | Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "gmdb",
+      "label": "Guaranteed Minimum Death Benefit (GMDB)",
+      "order": 33,
+      "group": "benefits",
+      "status": "both_na",
+      "base_status": "both_na",
+      "reason": "both state it does not apply",
+      "method": "state",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Minimum Death Benefit (GMDB) Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Minimum Death Benefit (GMDB) | Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "gmib",
+      "label": "Guaranteed Minimum Income Benefit (GMIB)",
+      "order": 34,
+      "group": "benefits",
+      "status": "both_na",
+      "base_status": "both_na",
+      "reason": "both state it does not apply",
+      "method": "state",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Minimum Income Benefit (GMIB) Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Guaranteed Minimum Income Benefit (GMIB) | Not available",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "other_benefit",
+      "label": "Other",
+      "order": 35,
+      "group": "benefits",
+      "status": "both_na",
+      "base_status": "both_na",
+      "reason": "both state it does not apply",
+      "method": "state",
+      "detail": {},
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Other optional guaranteed benefits None specified",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "not_applicable",
+        "display": "N/A",
+        "value": null,
+        "normalized": null,
+        "evidence": [
+          {
+            "quote": "Other optional guaranteed benefits | None specified",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      }
+    },
+    {
+      "key": "state_approvals",
+      "label": "State Approvals",
+      "order": 36,
+      "group": "availability",
+      "status": "different",
+      "base_status": "different",
+      "reason": "only in A (4): CA, MA, MN, NY; only in B (5): AL, HI, OR, VT, WV",
+      "method": "set",
+      "detail": {
+        "only_in_a": [
+          "CA",
+          "MA",
+          "MN",
+          "NY"
+        ],
+        "only_in_b": [
+          "AL",
+          "HI",
+          "OR",
+          "VT",
+          "WV"
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "NOT APPROVED CA · MA · MN · NY (approved otherwise in remaining 46 states + DC)",
+        "value": {
+          "mode": "not_approved",
+          "states": [
+            "CA",
+            "MA",
+            "MN",
+            "NY"
+          ]
+        },
+        "normalized": [
+          "CA",
+          "MA",
+          "MN",
+          "NY"
+        ],
+        "evidence": [
+          {
+            "quote": "For this fictional example, the product is treated as approved for sale in the 46 remaining U.S. states and the District of Columbia",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "NOT APPROVED CA  · MA  · MN  · NY",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Not approved in the following five states: AL · HI · OR · VT · WV",
+        "value": {
+          "mode": "not_approved",
+          "states": [
+            "AL",
+            "HI",
+            "OR",
+            "VT",
+            "WV"
+          ]
+        },
+        "normalized": [
+          "AL",
+          "HI",
+          "OR",
+          "VT",
+          "WV"
+        ],
+        "evidence": [
+          {
+            "quote": "For this fictional example, the product is treated as approved for sale in 45 U.S. states and the District of Columbia",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "AL  · HI  · OR  · VT  · WV",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "street_level_compensation",
+      "label": "Street Level Compensation",
+      "order": 37,
+      "group": "compensation",
+      "status": "different",
+      "base_status": "different",
+      "reason": "-|year one|18.max_age: 75 vs 70; -|year one|18.pct: 5 vs 4.75; -|year one|71: <absent> vs {'min_age': 71, 'max_age': 80, 'pct': 3.75}; -|year one|76: {'min_age': 76, 'max_age': 80, 'pct': 4.0} vs <absent>; -|year one|81.max_age: not stated vs 82 (+1 more)",
+      "method": "bands",
+      "detail": {
+        "diffs": [
+          {
+            "path": "-|year one|18.max_age",
+            "a": 75,
+            "b": 70
+          },
+          {
+            "path": "-|year one|18.pct",
+            "a": 5.0,
+            "b": 4.75
+          },
+          {
+            "path": "-|year one|71",
+            "a": "<absent>",
+            "b": {
+              "min_age": 71,
+              "max_age": 80,
+              "pct": 3.75
+            }
+          },
+          {
+            "path": "-|year one|76",
+            "a": {
+              "min_age": 76,
+              "max_age": 80,
+              "pct": 4.0
+            },
+            "b": "<absent>"
+          },
+          {
+            "path": "-|year one|81.max_age",
+            "a": null,
+            "b": 82
+          },
+          {
+            "path": "-|year one|81.pct",
+            "a": 3.0,
+            "b": 2.5
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "Year one\n18-75\n5.00% of eligible premium\nYear one\n76-80\n4.00% of eligible premium\nYear one\n81 and above\n3.00% of eligible premium",
+        "value": [
+          {
+            "category": null,
+            "year": "YEAR ONE",
+            "min_age": 18,
+            "max_age": 75,
+            "pct": 5.0
+          },
+          {
+            "category": null,
+            "year": "YEAR ONE",
+            "min_age": 76,
+            "max_age": 80,
+            "pct": 4.0
+          },
+          {
+            "category": null,
+            "year": "YEAR ONE",
+            "min_age": 81,
+            "max_age": null,
+            "pct": 3.0
+          }
+        ],
+        "normalized": {
+          "-|year one|18": {
+            "min_age": 18,
+            "max_age": 75,
+            "pct": 5.0
+          },
+          "-|year one|76": {
+            "min_age": 76,
+            "max_age": 80,
+            "pct": 4.0
+          },
+          "-|year one|81": {
+            "min_age": 81,
+            "max_age": null,
+            "pct": 3.0
+          }
+        },
+        "evidence": [
+          {
+            "quote": "Year one | 18-75 | 5.00% of eligible premium",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Year one | 76-80 | 4.00% of eligible premium",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Year one | 81 and above | 3.00% of eligible premium",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [
+          "page_corrected"
+        ],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "Year one 18-70 4.75% of eligible premium; Year one 71-80 3.75% of eligible premium; Year one 81-82 2.50% of eligible premium",
+        "value": [
+          {
+            "category": null,
+            "year": "Year one",
+            "min_age": 18,
+            "max_age": 70,
+            "pct": 4.75
+          },
+          {
+            "category": null,
+            "year": "Year one",
+            "min_age": 71,
+            "max_age": 80,
+            "pct": 3.75
+          },
+          {
+            "category": null,
+            "year": "Year one",
+            "min_age": 81,
+            "max_age": 82,
+            "pct": 2.5
+          }
+        ],
+        "normalized": {
+          "-|year one|18": {
+            "min_age": 18,
+            "max_age": 70,
+            "pct": 4.75
+          },
+          "-|year one|71": {
+            "min_age": 71,
+            "max_age": 80,
+            "pct": 3.75
+          },
+          "-|year one|81": {
+            "min_age": 81,
+            "max_age": 82,
+            "pct": 2.5
+          }
+        },
+        "evidence": [
+          {
+            "quote": "Year one\n18-70\n4.75% of eligible premium",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Year one\n71-80\n3.75% of eligible premium",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Year one\n81-82\n2.50% of eligible premium",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    },
+    {
+      "key": "data_current_as_of",
+      "label": "Data thought to be current as of:",
+      "order": 38,
+      "group": "product_info",
+      "status": "different",
+      "base_status": "different",
+      "reason": "value: 2026-11-01 vs 2026-11-10",
+      "method": "exact",
+      "detail": {
+        "diffs": [
+          {
+            "path": "",
+            "a": "2026-11-01",
+            "b": "2026-11-10"
+          }
+        ]
+      },
+      "review": false,
+      "review_reasons": [],
+      "a": {
+        "state": "found",
+        "display": "November 1, 2026",
+        "value": "2026-11-01",
+        "normalized": "2026-11-01",
+        "evidence": [
+          {
+            "quote": "Information current through November 1, 2026",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      },
+      "b": {
+        "state": "found",
+        "display": "November 10, 2026",
+        "value": "2026-11-10",
+        "normalized": "2026-11-10",
+        "evidence": [
+          {
+            "quote": "Information current through\nNovember 10, 2026",
+            "page": 1,
+            "verified": true
+          },
+          {
+            "quote": "Information current as of\nNovember 10, 2026",
+            "page": 1,
+            "verified": true
+          }
+        ],
+        "confidence": "high",
+        "flags": [],
+        "note": null
+      }
+    }
+  ]
+}
