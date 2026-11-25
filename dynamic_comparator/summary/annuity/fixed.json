@@ -1,0 +1,190 @@
+{
+  "properties": [
+    {
+      "key": "company",
+      "label": "Company",
+      "order": 1,
+      "group": "product_info"
+    },
+    {
+      "key": "product_name",
+      "label": "Product Name",
+      "order": 2,
+      "group": "product_info"
+    },
+    {
+      "key": "product_type",
+      "label": "Product Type",
+      "order": 3,
+      "group": "product_info"
+    },
+    {
+      "key": "parties",
+      "label": "Parties Involved",
+      "order": 4,
+      "group": "product_info"
+    },
+    {
+      "key": "issue_age_bands",
+      "label": "Issue Age Bands",
+      "order": 5,
+      "group": "eligibility"
+    },
+    {
+      "key": "suitability_requirements",
+      "label": "Suitability Requirements",
+      "order": 6,
+      "group": "eligibility"
+    },
+    {
+      "key": "min_initial_premium",
+      "label": "Minimum Initial Premium",
+      "order": 7,
+      "group": "premiums"
+    },
+    {
+      "key": "min_subsequent_premium",
+      "label": "Minimum Subsequent Premium",
+      "order": 8,
+      "group": "premiums"
+    },
+    {
+      "key": "premium_modes",
+      "label": "Premium Modes",
+      "order": 9,
+      "group": "premiums"
+    },
+    {
+      "key": "accumulation_account_definition",
+      "label": "Accumulation/Contract Account",
+      "order": 10,
+      "group": "premiums"
+    },
+    {
+      "key": "declared_interest_rate",
+      "label": "Declared Interest Rate",
+      "order": 11,
+      "group": "crediting_values"
+    },
+    {
+      "key": "guaranteed_interest_rate",
+      "label": "Guaranteed Interest Rate",
+      "order": 12,
+      "group": "crediting_values"
+    },
+    {
+      "key": "guarantee_period",
+      "label": "Guarantee Period (Declared Rate Term)",
+      "order": 13,
+      "group": "crediting_values"
+    },
+    {
+      "key": "minimum_guaranteed_value",
+      "label": "Minimum Guaranteed Value",
+      "order": 14,
+      "group": "crediting_values"
+    },
+    {
+      "key": "surrender_charge",
+      "label": "Surrender Charge",
+      "order": 15,
+      "group": "withdrawals_charges"
+    },
+    {
+      "key": "mva_details",
+      "label": "Market Value Adjustment (MVA)",
+      "order": 16,
+      "group": "withdrawals_charges"
+    },
+    {
+      "key": "penalty_free_withdrawals",
+      "label": "Penalty-Free Withdrawals",
+      "order": 17,
+      "group": "withdrawals_charges"
+    },
+    {
+      "key": "surrender_charge_waivers",
+      "label": "Surrender Charge Waivers",
+      "order": 18,
+      "group": "withdrawals_charges"
+    },
+    {
+      "key": "death_benefit",
+      "label": "Death Benefit",
+      "order": 19,
+      "group": "benefits"
+    },
+    {
+      "key": "living_benefit_riders",
+      "label": "Living Benefit Riders",
+      "order": 20,
+      "group": "benefits"
+    },
+    {
+      "key": "annuitization_options",
+      "label": "Annuitization Options",
+      "order": 21,
+      "group": "benefits"
+    },
+    {
+      "key": "contract_surrender_value",
+      "label": "Contract Surrender Value Basis",
+      "order": 22,
+      "group": "crediting_values"
+    },
+    {
+      "key": "interest_crediting_methods",
+      "label": "Interest Crediting Methods",
+      "order": 23,
+      "group": "crediting_values"
+    },
+    {
+      "key": "state_approvals",
+      "label": "State Approvals",
+      "order": 24,
+      "group": "servicing"
+    },
+    {
+      "key": "product_effective_date",
+      "label": "Product Effective Date",
+      "order": 25,
+      "group": "servicing"
+    },
+    {
+      "key": "beneficiary_change_provisions",
+      "label": "Beneficiary / Ownership Changes",
+      "order": 26,
+      "group": "servicing"
+    },
+    {
+      "key": "claim_filing_requirements",
+      "label": "Claim Filing Requirements",
+      "order": 27,
+      "group": "servicing"
+    },
+    {
+      "key": "other_charge",
+      "label": "Other Charge",
+      "order": 28,
+      "group": "withdrawals_charges"
+    },
+    {
+      "key": "product_fee",
+      "label": "Product Fee",
+      "order": 29,
+      "group": "withdrawals_charges"
+    },
+    {
+      "key": "withdrawal_limits",
+      "label": "Withdrawal Limits / Minimums",
+      "order": 30,
+      "group": "withdrawals_charges"
+    },
+    {
+      "key": "form_numbers_and_disclosures",
+      "label": "Form Numbers & Disclosures",
+      "order": 31,
+      "group": "servicing"
+    }
+  ]
+}

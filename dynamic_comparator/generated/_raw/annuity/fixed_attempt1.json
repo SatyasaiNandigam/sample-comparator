@@ -1,0 +1,619 @@
+{
+  "properties": [
+    {
+      "key": "company",
+      "label": "Company",
+      "order": 1,
+      "group": "product_info",
+      "type": "text",
+      "description": "Name of the issuing insurance company and, if stated, its parent group.",
+      "compare": "exact",
+      "aliases": [
+        "issuer",
+        "insurer",
+        "carrier",
+        "issued by",
+        "insurance company"
+      ],
+      "not_": [],
+      "format_hint": "issuer name; if a parent group is stated append it after ' | ', e.g. 'ABC Life | ABC Financial Group'",
+      "na_means": null,
+      "notes": null
+    },
+    {
+      "key": "product_name",
+      "label": "Product Name",
+      "order": 2,
+      "group": "product_info",
+      "type": "text",
+      "description": "The marketed name of the fixed annuity product as printed on the specification (model name or product title).",
+      "compare": "exact",
+      "aliases": [
+        "product",
+        "contract name",
+        "annuity name",
+        "model name"
+      ],
+      "not_": [
+        "company"
+      ],
+      "format_hint": null,
+      "na_means": null,
+      "notes": null
+    },
+    {
+      "key": "product_type",
+      "label": "Product Type",
+      "order": 3,
+      "group": "product_info",
+      "type": "enum_text",
+      "description": "The specific annuity type stated by the document (must be 'Fixed' or equivalent wording for this product type).",
+      "compare": "exact",
+      "aliases": [
+        "annuity type",
+        "type",
+        "product classification"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": null,
+      "notes": "Record the document's exact short label, e.g. 'Fixed Annuity', 'Fixed Deferred Annuity'."
+    },
+    {
+      "key": "parties",
+      "label": "Parties Involved",
+      "order": 4,
+      "group": "product_info",
+      "type": "list_text",
+      "description": "List of contract roles explicitly named in the spec (for example Owner, Annuitant, Beneficiary).",
+      "compare": "set",
+      "aliases": [
+        "who can be owner",
+        "roles",
+        "contract parties"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": null,
+      "notes": "List each role as a short phrase in the order presented."
+    },
+    {
+      "key": "issue_age_bands",
+      "label": "Issue Age Bands",
+      "order": 5,
+      "group": "eligibility",
+      "type": "age_bands",
+      "description": "Allowed issue age range(s) for the annuity, including any separate bands for categories (if printed as Q/NQ or other).",
+      "compare": "bands",
+      "aliases": [
+        "issue ages",
+        "minimum issue age",
+        "maximum issue age",
+        "age limits"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": null,
+      "notes": "If a single open-ended maximum (e.g. 'no maximum') is stated, set max_age to null."
+    },
+    {
+      "key": "suitability_requirements",
+      "label": "Suitability Requirements",
+      "order": 6,
+      "group": "eligibility",
+      "type": "text",
+      "description": "Any suitability or suitability-related requirements the document states (e.g., 'must be suitable for retirement income').",
+      "compare": "judge",
+      "aliases": [
+        "suitability",
+        "suitability standards",
+        "suitability rules"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": "Document does not state suitability requirements",
+      "notes": null
+    },
+    {
+      "key": "min_initial_premium",
+      "label": "Minimum Initial Premium",
+      "order": 7,
+      "group": "premiums",
+      "type": "currency_by_category",
+      "description": "Minimum first purchase payment required, given per plan category (use category 'All' if no categories are used).",
+      "compare": "by_key",
+      "aliases": [
+        "minimum initial premium",
+        "minimum premium",
+        "minimum single premium",
+        "initial deposit minimum"
+      ],
+      "not_": [
+        "min_subsequent_premium"
+      ],
+      "format_hint": "[{category: str, amount: float}]",
+      "na_means": null,
+      "notes": null
+    },
+    {
+      "key": "min_subsequent_premium",
+      "label": "Minimum Subsequent Premium",
+      "order": 8,
+      "group": "premiums",
+      "type": "currency_by_category",
+      "description": "Minimum additional purchase payment after the initial premium, per category if stated.",
+      "compare": "by_key",
+      "aliases": [
+        "minimum additional premium",
+        "minimum add premium",
+        "subsequent deposit minimum"
+      ],
+      "not_": [
+        "min_initial_premium"
+      ],
+      "format_hint": "[{category: str, amount: float}]",
+      "na_means": "No subsequent premiums permitted (single premium only)",
+      "notes": "If the product is strictly single-premium, set as N/A and note means accordingly."
+    },
+    {
+      "key": "premium_modes",
+      "label": "Premium Modes",
+      "order": 9,
+      "group": "premiums",
+      "type": "list_text",
+      "description": "Payment modes and whether the product permits single, flexible or periodic premium funding (e.g., 'Single premium only', 'Flexible premiums accepted').",
+      "compare": "set",
+      "aliases": [
+        "payment mode",
+        "funding options",
+        "premium frequency"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": null,
+      "notes": "List exactly as the document words funding options."
+    },
+    {
+      "key": "accumulation_account_definition",
+      "label": "Accumulation/Contract Account",
+      "order": 10,
+      "group": "premiums",
+      "type": "text",
+      "description": "Definition of the contract's accumulation or contract value basis used for credited interest and withdrawals (e.g., 'contract value, less surrender charges').",
+      "compare": "judge",
+      "aliases": [
+        "contract value definition",
+        "accumulation value",
+        "account value basis"
+      ],
+      "not_": [
+        "contract_surrender_value"
+      ],
+      "format_hint": null,
+      "na_means": null,
+      "notes": "Capture the wording that defines the base on which interest and charges are measured."
+    },
+    {
+      "key": "declared_interest_rate",
+      "label": "Declared Interest Rate",
+      "order": 11,
+      "group": "crediting_values",
+      "type": "rate_by_term",
+      "description": "Any declared (non-guaranteed) interest rates and the period(s) they apply to as stated in the document, and any effective start date.",
+      "compare": "numeric",
+      "aliases": [
+        "current rate",
+        "current declared rate",
+        "current interest rate"
+      ],
+      "not_": [
+        "guaranteed_interest_rate"
+      ],
+      "format_hint": "{rates_pct: [float], guarantee_years: int|null, effective_date: yyyy-mm-dd|null}",
+      "na_means": "No declared (non-guaranteed) rate shown",
+      "notes": "List rates in the order printed. If no effective date included, set effective_date to null."
+    },
+    {
+      "key": "guaranteed_interest_rate",
+      "label": "Guaranteed Interest Rate",
+      "order": 12,
+      "group": "crediting_values",
+      "type": "pct_formula",
+      "description": "Guaranteed minimum interest crediting information: share of premium guaranteed (pct_of_premium) and the guaranteed interest rate range and whether it varies by state.",
+      "compare": "exact",
+      "aliases": [
+        "minimum guarantee",
+        "guaranteed rate",
+        "minimum interest guarantee"
+      ],
+      "not_": [
+        "declared_interest_rate"
+      ],
+      "format_hint": "{pct_of_premium: float, rate_min: float, rate_max: float|null, varies: boolean}",
+      "na_means": null,
+      "notes": "If a single guaranteed rate is given, set rate_max equal to rate_min."
+    },
+    {
+      "key": "guarantee_period",
+      "label": "Guarantee Period (Declared Rate Term)",
+      "order": 13,
+      "group": "crediting_values",
+      "type": "rate_by_term",
+      "description": "The length of time the declared or credited rate is stated to apply before reallocation or reset, and any guaranteed years for that rate.",
+      "compare": "numeric",
+      "aliases": [
+        "rate guarantee period",
+        "declared rate term",
+        "rate term"
+      ],
+      "not_": [
+        "declared_interest_rate"
+      ],
+      "format_hint": "{rates_pct: [float], guarantee_years: int|null, effective_date: yyyy-mm-dd|null}",
+      "na_means": null,
+      "notes": "Use this for multi-year guaranteed declared-rate periods distinct from ongoing 'current rate' statements."
+    },
+    {
+      "key": "minimum_guaranteed_value",
+      "label": "Minimum Guaranteed Value",
+      "order": 14,
+      "group": "crediting_values",
+      "type": "pct_formula",
+      "description": "Any guaranteed minimum value formula expressed as a percentage of premium or contract value (for example 'guaranteed to return at least X% of premiums paid').",
+      "compare": "exact",
+      "aliases": [
+        "guaranteed minimum",
+        "minimum guaranteed value",
+        "minimum contract value guarantee"
+      ],
+      "not_": [
+        "contract_surrender_value",
+        "accumulation_account_definition"
+      ],
+      "format_hint": "{pct_of_premium: float|null, rate_min: float|null, rate_max: float|null, varies: boolean}",
+      "na_means": "No minimum guaranteed value beyond standard interest guarantees",
+      "notes": "If guarantee is expressed as a dollar amount, capture it as pct_of_premium=null and include details in notes."
+    },
+    {
+      "key": "surrender_charge",
+      "label": "Surrender Charge",
+      "order": 15,
+      "group": "withdrawals_charges",
+      "type": "schedule",
+      "description": "Surrender charge period in years and the charge percentage applied in each policy year. Also record whether a Market Value Adjustment (MVA) applies.",
+      "compare": "schedule",
+      "aliases": [
+        "withdrawal charge",
+        "CDSC",
+        "contingent deferred sales charge",
+        "surrender charge schedule",
+        "early withdrawal charge",
+        "surrender penalty"
+      ],
+      "not_": [
+        "other_charge",
+        "penalty_free_withdrawals"
+      ],
+      "format_hint": "{years: int, schedule_pct: [float per year], mva: none|positive|negative|both|unspecified|null}",
+      "na_means": "No surrender charges",
+      "notes": "Policy years run in order; include a trailing 0% year if shown. MVA belongs to this property."
+    },
+    {
+      "key": "mva_details",
+      "label": "Market Value Adjustment (MVA)",
+      "order": 16,
+      "group": "withdrawals_charges",
+      "type": "text",
+      "description": "Any textual details about whether an MVA applies, how it is calculated, and the effect (increase, decrease, or both).",
+      "compare": "judge",
+      "aliases": [
+        "market value adjustment",
+        "MVA",
+        "market adjustment"
+      ],
+      "not_": [
+        "surrender_charge"
+      ],
+      "format_hint": null,
+      "na_means": "Document states no MVA applies",
+      "notes": "If the MVA is fully described in surrender_charge (mva field), set this to 'covered_in_surrender_charge'."
+    },
+    {
+      "key": "penalty_free_withdrawals",
+      "label": "Penalty-Free Withdrawals",
+      "order": 17,
+      "group": "withdrawals_charges",
+      "type": "text",
+      "description": "Amount or percent that may be withdrawn without surrender charge or MVA and when it becomes available (for example '10% of contract value annually, after first year').",
+      "compare": "judge",
+      "aliases": [
+        "free withdrawal",
+        "free withdrawal provision",
+        "free partial withdrawal",
+        "withdrawal privilege",
+        "penalty free withdrawal",
+        "annual free withdrawal"
+      ],
+      "not_": [
+        "surrender_charge",
+        "surrender_charge_waivers"
+      ],
+      "format_hint": "one short phrase: percentage, basis and timing, e.g. '10% of contract value each year, immediately'",
+      "na_means": "No penalty-free withdrawals",
+      "notes": null
+    },
+    {
+      "key": "surrender_charge_waivers",
+      "label": "Surrender Charge Waivers",
+      "order": 18,
+      "group": "withdrawals_charges",
+      "type": "list_text",
+      "description": "Circumstances where surrender charges are waived (for example nursing home, terminal illness, death, annuitization), listed as printed.",
+      "compare": "set",
+      "aliases": [
+        "waivers",
+        "surrender waiver",
+        "charge waivers"
+      ],
+      "not_": [
+        "penalty_free_withdrawals"
+      ],
+      "format_hint": null,
+      "na_means": "No waivers stated",
+      "notes": "List each waiver condition as a separate item."
+    },
+    {
+      "key": "death_benefit",
+      "label": "Death Benefit",
+      "order": 19,
+      "group": "benefits",
+      "type": "text",
+      "description": "The death benefit payable as stated (for example 'contract value', 'guaranteed minimum of premiums paid less withdrawals', or other formula).",
+      "compare": "judge",
+      "aliases": [
+        "benefit on death",
+        "beneficiary benefit",
+        "death payout"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": null,
+      "notes": "Capture the precise formula or basis used to compute the death benefit."
+    },
+    {
+      "key": "living_benefit_riders",
+      "label": "Living Benefit Riders",
+      "order": 20,
+      "group": "benefits",
+      "type": "list_text",
+      "description": "List of optional or included living benefit riders referenced (for example lifetime income rider, LTC rider), as named in the document.",
+      "compare": "set",
+      "aliases": [
+        "riders",
+        "optional riders",
+        "income riders",
+        "living benefits"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": "No living benefit riders offered",
+      "notes": "Include riders even if available for an additional charge."
+    },
+    {
+      "key": "annuitization_options",
+      "label": "Annuitization Options",
+      "order": 21,
+      "group": "benefits",
+      "type": "list_text",
+      "description": "Annuitization payout options and forms the contract offers (for example life only, joint life, period certain), as printed.",
+      "compare": "set",
+      "aliases": [
+        "payout options",
+        "income options",
+        "annuity payout forms"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": "No annuitization options described",
+      "notes": null
+    },
+    {
+      "key": "contract_surrender_value",
+      "label": "Contract Surrender Value Basis",
+      "order": 22,
+      "group": "crediting_values",
+      "type": "currency",
+      "description": "If the document states a formula or guaranteed minimum for the surrender value in dollar terms, capture the amount and the basis (for example 'percentage of contract value' or 'contract value less surrender charge').",
+      "compare": "numeric",
+      "aliases": [
+        "surrender value",
+        "cash surrender value",
+        "guaranteed surrender value"
+      ],
+      "not_": [
+        "accumulation_account_definition",
+        "minimum_guaranteed_value"
+      ],
+      "format_hint": "{amount: float, basis: str|null}",
+      "na_means": "No separate guaranteed dollar surrender value stated",
+      "notes": "If only a formula is given, amount may be null and basis filled; if only percent shown use amount as percent number and basis as 'percent of contract value'."
+    },
+    {
+      "key": "interest_crediting_methods",
+      "label": "Interest Crediting Methods",
+      "order": 23,
+      "group": "crediting_values",
+      "type": "count_pair",
+      "description": "Number of indexed and fixed crediting strategies available. For a pure fixed annuity this typically shows fixed strategies; provide counts for both indexed and fixed.",
+      "compare": "exact",
+      "aliases": [
+        "crediting methods",
+        "crediting options",
+        "index vs fixed options"
+      ],
+      "not_": [],
+      "format_hint": "{indexed: int, fixed: int}",
+      "na_means": null,
+      "notes": "If the product has only fixed strategies set indexed to 0."
+    },
+    {
+      "key": "state_approvals",
+      "label": "State Approvals",
+      "order": 24,
+      "group": "servicing",
+      "type": "state_set",
+      "description": "US states (and DC) where the product is NOT approved, or where it is approved if only that list is given.",
+      "compare": "set",
+      "aliases": [
+        "state availability",
+        "states approved",
+        "states not approved",
+        "state variations",
+        "approved states",
+        "product availability by state"
+      ],
+      "not_": [],
+      "format_hint": "{mode: 'approved'|'not_approved', states: ['CA','NY']}",
+      "na_means": null,
+      "notes": "Record which mode the document uses."
+    },
+    {
+      "key": "product_effective_date",
+      "label": "Product Effective Date",
+      "order": 25,
+      "group": "servicing",
+      "type": "date",
+      "description": "Effective date or issue start date for the rates or product terms as stated in the document.",
+      "compare": "exact",
+      "aliases": [
+        "effective date",
+        "issue date",
+        "rate effective"
+      ],
+      "not_": [],
+      "format_hint": "ISO date yyyy-mm-dd",
+      "na_means": "No effective date provided",
+      "notes": "If only month/year provided use first day of month and note this in 'notes'."
+    },
+    {
+      "key": "beneficiary_change_provisions",
+      "label": "Beneficiary / Ownership Changes",
+      "order": 26,
+      "group": "servicing",
+      "type": "text",
+      "description": "Procedures and restrictions stated for changing owner or beneficiary, including any forms, timing or limits.",
+      "compare": "judge",
+      "aliases": [
+        "change of beneficiary",
+        "ownership change",
+        "transfer of ownership"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": "No provisions stated",
+      "notes": null
+    },
+    {
+      "key": "claim_filing_requirements",
+      "label": "Claim Filing Requirements",
+      "order": 27,
+      "group": "servicing",
+      "type": "text",
+      "description": "Any deadlines, required forms, or timelines for filing death or income claims as stated in the document.",
+      "compare": "judge",
+      "aliases": [
+        "claims",
+        "claim procedures",
+        "filing requirements"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": "No claim filing limits or special requirements stated",
+      "notes": null
+    },
+    {
+      "key": "other_charge",
+      "label": "Other Charge",
+      "order": 28,
+      "group": "withdrawals_charges",
+      "type": "text",
+      "description": "Any charge or deduction that is NOT captured by another charge property (excludes surrender charge, MVA, product fee, annual contract fee and rider charges).",
+      "compare": "judge",
+      "aliases": [
+        "additional charges",
+        "other fees",
+        "miscellaneous charges",
+        "other deductions"
+      ],
+      "not_": [
+        "surrender_charge",
+        "mva_details",
+        "penalty_free_withdrawals",
+        "surrender_charge_waivers",
+        "product_fee"
+      ],
+      "format_hint": null,
+      "na_means": "Document states no other charges apply",
+      "notes": "Never return 'N/A' unless the document explicitly says no other charges exist. If nothing described, state 'not_found'."
+    },
+    {
+      "key": "product_fee",
+      "label": "Product Fee",
+      "order": 29,
+      "group": "withdrawals_charges",
+      "type": "currency",
+      "description": "Any recurring or one-time explicit product-level fee stated (amount and the basis it is measured on, such as 'per contract' or 'percent of account value').",
+      "compare": "numeric",
+      "aliases": [
+        "annual contract fee",
+        "contract fee",
+        "administrative fee",
+        "management fee"
+      ],
+      "not_": [
+        "other_charge"
+      ],
+      "format_hint": "{amount: float, basis: str|null}",
+      "na_means": "No product-level fee stated",
+      "notes": null
+    },
+    {
+      "key": "withdrawal_limits",
+      "label": "Withdrawal Limits / Minimums",
+      "order": 30,
+      "group": "withdrawals_charges",
+      "type": "text",
+      "description": "Any stated limits, minimum amounts, or timing restrictions on withdrawals (for example minimum dollar amount per partial withdrawal or required notice period).",
+      "compare": "judge",
+      "aliases": [
+        "withdrawal minimums",
+        "partial withdrawal limits",
+        "withdrawal timing"
+      ],
+      "not_": [
+        "penalty_free_withdrawals"
+      ],
+      "format_hint": null,
+      "na_means": "No withdrawal limits stated",
+      "notes": null
+    },
+    {
+      "key": "form_numbers_and_disclosures",
+      "label": "Form Numbers & Disclosures",
+      "order": 31,
+      "group": "servicing",
+      "type": "list_text",
+      "description": "Identifiers for policy forms, rider form numbers, and required disclosures listed in the spec.",
+      "compare": "set",
+      "aliases": [
+        "form numbers",
+        "policy forms",
+        "disclosures"
+      ],
+      "not_": [],
+      "format_hint": null,
+      "na_means": "No form numbers or disclosure IDs provided",
+      "notes": "List each form or disclosure identifier exactly as printed."
+    }
+  ]
+}
